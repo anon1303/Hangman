@@ -20,8 +20,12 @@ def game(ans):
 
 		# When the player got the correct Word
 		if blanks == ans:
-			print(blanks)
-			print("you win!")
+			print(blanks.upper())
+			print("")
+			print("*"*14)
+			print("YOU WIN!")
+			print("*"*14)
+
 			break
 
 		#player input a guess letter
@@ -93,7 +97,7 @@ def game(ans):
 				print("     O_|    ")
 				print("    /|\      ")
 				print("    / \     ")
-				print("The word is",ans.upper())
+				print("\nThe word is",ans.upper())
 				break
 while True:
 
