@@ -1,9 +1,10 @@
 import random
+import string
 
 def game(ans):
 	life = 10
 	guess = ''
-
+	
 	while True:
 		blanks = '' #string that will contain the correctly guessed letter
 		
@@ -94,22 +95,25 @@ def game(ans):
 				print("    / \     ")
 				print("The word is",ans.upper())
 				break
+while True:
 
-#Chose a random word from a list of words from
-#the text file				
-with open('words.txt') as words:
-	chosen = [word for word in words]
-	c = random.choice(chosen)
+	#Chose a random word from a list of words from
+	#the text file				
+	with open('words.txt') as words:
+		chosen = [word for word in words]
+		c = random.choice(chosen)
 
-print("*"*17)
-print("  H A N G M A N")
-print("*"*17)
+		word = c.rstrip()
 
-name = input("Enter your name: \n") #Ask player's name
-print("Welcome",name.upper(),"enjoy and don't let paga die!")
+	print("*"*17)
+	print("  H A N G M A N")
+	print("*"*17)
 
-# words = random.choice(["water","black","nature","ant","party"]) #library of words
+	name = input("Enter your name: \n") #Ask player's name
+	print("Welcome",name.upper(),"enjoy and don't let paga die!")
 
-print("_"*50)
-print("try to guess the word in less than 10 attempts!")
-game(c)
+	# words = random.choice(["water","black","nature","ant","party"]) #library of words
+
+	print("_"*50)
+	print("try to guess the word in less than 10 attempts!")
+	game(word)
